@@ -1,5 +1,24 @@
 .App {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 100vh;
+  display: flex;
+  align-items: center
+}
+
+.photo-card {
+  display: flex;
+  align-items: center;
+}
+
+.image-text-container {
   text-align: center;
+}
+
+p {
+  text-align: left;
+  margin-left: 5%;
 }
 
 .App-logo {
@@ -31,3 +50,4 @@
     transform: rotate(360deg);
   }
 }
+

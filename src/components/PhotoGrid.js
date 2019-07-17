@@ -4,41 +4,40 @@ import axios from "axios"
 
 function PhotoGrid() {
 
-    const [photos, setPhotos] = useState([]);
-    const dates = ['2012-03-14', '2012-03-13', '2012-03-11']
-
-    
-    // useEffect(() => {
-    //     axios
-    //         .get(`https://api.nasa.gov/planetary/apod?api_key=89ntUtLrjYyw6hhSA6e7fKp31fVfzFUGHuDTkmCl&date=2012-03-14`)
-            
-    //         .then(response => {
-    //             console.log(response.data)
-    //             // const nasaData = response.data
-    //         })
-    
-    // }, [])
-
+    const [photoData, setPhotoData] = useState([]);
+    // const dates = ['2012-03-14', '2012-03-13', '2012-03-11']
     useEffect(() => {
-
-        dates.forEach(function(date) {
-            axios
-            .get(`https://api.nasa.gov/planetary/apod?api_key=89ntUtLrjYyw6hhSA6e7fKp31fVfzFUGHuDTkmCl&date=${date}`)
+        axios
+            .get(`https://api.nasa.gov/planetary/apod?api_key=89ntUtLrjYyw6hhSA6e7fKp31fVfzFUGHuDTkmCl&date=2012-03-14`)
             .then(response => {
-                photos.push(response.data)
-                console.log(photos)
+                const photoData = response.data
+                setPhotoData(photoData)
             })
-            
-        
-        })
-        
     }, [])
+
+    // useEffect(() => {
+    //     dates.forEach(function(date) {
+    //         axios
+    //         .get(`https://api.nasa.gov/planetary/apod?api_key=89ntUtLrjYyw6hhSA6e7fKp31fVfzFUGHuDTkmCl&date=${date}`)
+    //         .then(response => {
+    //             // photos.push(response.data)
+    //             // console.log(photos)
+    //             setPhotos(photos.push(Object.values(response)))
+    //             // console.log(Object.values(photos))
+    //             console.log(photos)
+    //         })  
+    //     })
+    // }, [])
     
-    // console.log(nasaData)
+    console.log(photoData)
     return (
         <div className='photo-grid'>
-            <p>Placeholder Text</p>
-            <PhotoCard />
+            {<PhotoCard date={photoData.date} 
+                key={photoData.date} 
+                url={photoData.url} 
+                explanation={photoData.explanation} 
+                title={photoData.title}
+            />}
         </div>
     )
 }

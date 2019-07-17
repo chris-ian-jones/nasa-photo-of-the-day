@@ -1,9 +1,14 @@
 import React from 'react'
 
-function PhotoCard() {
+function PhotoCard(props) {
     return (
         <div className='photo-card'>
-            <h4>photocard placeholder</h4>
+            <img src={props.url}></img>
+            <div className='image-text-container'>
+                <h1>{props.title}</h1>
+                <h4>{props.date}</h4>
+                <p>{props.explanation}</p>
+            </div>
         </div>
     )
 }
