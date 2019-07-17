@@ -29,15 +29,15 @@ function PhotoGrid() {
     //     })
     // }, [])
     
-    console.log(photoData)
     return (
         <div className='photo-grid'>
-            {<PhotoCard date={photoData.date} 
-                key={photoData.date} 
-                url={photoData.url} 
-                explanation={photoData.explanation} 
-                title={photoData.title}
-            />}
+        <h1>NASA Photo Of the Day</h1>
+        {<PhotoCard date={photoData.date} 
+            key={photoData.date} 
+            url={photoData.url} 
+            explanation={photoData.explanation} 
+            title={photoData.title}
+        />}
         </div>
     )
 }
