@@ -10,8 +10,8 @@ function PhotoGrid() {
         axios
             .get(`https://api.nasa.gov/planetary/apod?api_key=89ntUtLrjYyw6hhSA6e7fKp31fVfzFUGHuDTkmCl&date=2012-03-14`)
             .then(response => {
-                const photoData = response.data
-                setPhotoData(photoData)
+                const responsePhotoData = response.data
+                setPhotoData(responsePhotoData)
             })
     }, [])
 
