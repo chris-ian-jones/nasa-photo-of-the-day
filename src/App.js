@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import PhotoGrid from "./components/PhotoGrid"
+import PhotoGrid from "./components/PhotoGrid.js"
 
 function App() {
   return (
