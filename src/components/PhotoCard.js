@@ -2,12 +2,12 @@ import React from 'react'
 
 function PhotoCard(props) {
     return (
-        <div className='photo-card'>
+        <div style={{'display': 'flex', 'align-items': 'center'}}>
             <img src={props.url} alt='space'></img>
-            <div className='image-text-container'>
+            <div style={{'text-align': 'center'}}>
                 <h2>{props.title}</h2>
                 <h4>{props.date}</h4>
-                <p>{props.explanation}</p>
+                <p style={{'text-align': 'left', 'margin-left': '5%'}}>{props.explanation}</p>
             </div>
         </div>
     )

@@ -1,30 +1,3 @@
-.App {
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  height: 100vh;
-  display: flex;
-  align-items: center
-}
-
-.photo-card {
-  display: flex;
-  align-items: center;
-}
-
-.image-text-container {
-  text-align: center;
-}
-
-h1 {
-  text-align: left;
-}
-
-p {
-  text-align: left;
-  margin-left: 5%;
-}
-
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
