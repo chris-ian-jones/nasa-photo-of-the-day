@@ -2,8 +2,15 @@ import React, { useEffect, useState } from "react";
 import PhotoCard from "./PhotoCard.js"
 import axios from "axios"
 
-import { Header } from 'semantic-ui-react'
+import styled from 'styled-components'
+
+// import { Header } from 'semantic-ui-react'
 // import "semantic-ui/dist/semantic.min.css";
+
+const Title=styled.h1`
+    color: white;
+    text-align: center;
+`
 
 function PhotoGrid() {
     const [photoData, setPhotoData] = useState([]);
@@ -20,7 +27,7 @@ function PhotoGrid() {
     return (
         <div>
             {/* Example of using semantic-ui-react */}
-            <Header as='h1'>NASA Photo Of the Day</Header>
+            <Title>NASA Photo Of the Day</Title>
             {photoData.map(photo => 
                 <PhotoCard
                 date={photo.date} 

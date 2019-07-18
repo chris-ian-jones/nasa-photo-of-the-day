@@ -4,11 +4,12 @@ import PhotoGrid from "./components/PhotoGrid.js"
 import styled from 'styled-components'
 
 const AppContainer = styled.div`
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 90vw;
+  padding-left: 5%;
+  padding-right: 5%;
   display: flex;
   align-items: center;
+  background-color: black;
 `
 
 function App() {

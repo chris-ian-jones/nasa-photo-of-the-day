@@ -8,6 +8,8 @@ const FlexedCenterDiv = styled.div`
     display: flex;
     align-items: center;
     margin-top: 80px;
+    padding: 30px;
+    background-color: darkgrey;
 `
 
 const TextAlignCenterDiv = styled.div`
@@ -17,6 +19,7 @@ const TextAlignCenterDiv = styled.div`
 const PAlignLeftMarginLeft = styled.p`
     text-align: left; 
     margin-left: 5%;
+    margin-right: 5%;
 `
 
 const SizedImage = styled.img`
