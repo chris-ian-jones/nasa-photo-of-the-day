@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
 import PhotoCard from "./PhotoCard.js"
 import axios from "axios"
-
 import styled from 'styled-components'
 
-// import { Header } from 'semantic-ui-react'
-// import "semantic-ui/dist/semantic.min.css";
-
+// use of styled-components
 const Title=styled.h1`
     color: white;
     text-align: center;
 `
 
 function PhotoGrid() {
+    // destructuring assignment for array
     const [photoData, setPhotoData] = useState([]);
 
+    // single api call to Henry's service for object of nasa images with data
+    // updating state of variable photoData
     useEffect(() => {
         axios
             .get(`https://henry-mock-nasa-api.herokuapp.com/api`)
@@ -25,8 +25,8 @@ function PhotoGrid() {
     }, [])
 
     return (
+        // return grid component of photocard components
         <div>
-            {/* Example of using semantic-ui-react */}
             <Title>NASA Photo Of the Day</Title>
             {photoData.map(photo => 
                 <PhotoCard
