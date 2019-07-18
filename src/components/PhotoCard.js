@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header } from 'semantic-ui-react'
 import styled from 'styled-components'
+import Button from '@material-ui/core/Button';
 
 // use of styled-components
 const FlexedCenterDiv = styled.div`
@@ -39,6 +40,7 @@ function PhotoCard(props) {
                 <Header as='h2'>{props.title}</Header>
                 <Header as='h4'>{props.date}</Header>
                 <PAlignLeftMarginLeft>{props.explanation}</PAlignLeftMarginLeft>
+                <Button variant="contained" color="primary">Click Me</Button>
             </TextAlignCenterDiv>
         </FlexedCenterDiv>
     )

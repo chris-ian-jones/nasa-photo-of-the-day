@@ -3,6 +3,8 @@ import "./App.css";
 import PhotoGrid from "./components/PhotoGrid.js"
 import styled from 'styled-components'
 import { Grid, Form, Input, TextArea, Button, Select } from "semantic-ui-react";
+
+
 // import 'semantic-ui-css/semantic.min.css'
 
 // using styled-components
@@ -13,6 +15,7 @@ const AppContainer = styled.div`
   display: flex;
   align-items: center;
   background-color: black;
+  padding-bottom: 80px;
 `
 
 // app component
