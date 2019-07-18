@@ -8,7 +8,7 @@ function PhotoGrid() {
 
     useEffect(() => {
         axios
-            .get(`https://api.nasa.gov/planetary/apod?api_key=89ntUtLrjYyw6hhSA6e7fKp31fVfzFUGHuDTkmCl&date=2012-03-14`)
+            .get(`https://henry-mock-nasa-api.herokuapp.com/api`)
             .then(response => {
                 const responsePhotoData = response.data
                 setPhotoData(responsePhotoData)
@@ -18,12 +18,21 @@ function PhotoGrid() {
     return (
         <div>
             <h1 style={{ 'text-align': 'left' }}> NASA Photo Of the Day </h1>
-            {<PhotoCard date={photoData.date} 
+            {/* {<PhotoCard date={photoData.date} 
                 key={photoData.date} 
                 url={photoData.url} 
                 explanation={photoData.explanation} 
                 title={photoData.title}
-            />}
+            />} */
+            photoData.map(photo => 
+                <PhotoCard
+                date={photo.date} 
+                key={photo.date} 
+                url={photo.url} 
+                explanation={photo.explanation} 
+                title={photo.title}
+                />
+                )}
         </div>
     )
 }

@@ -8,7 +8,6 @@ function App() {
       'width': '90%',
       'margin-left': '5%',
       'margin-right': '5%',
-      'height': '100vh',
       'display': 'flex',
       'align-items': 'center'
     }}>
