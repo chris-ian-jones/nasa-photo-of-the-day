@@ -3,6 +3,7 @@ import "./App.css";
 import PhotoGrid from "./components/PhotoGrid.js"
 import styled from 'styled-components'
 import { Grid, Form, Input, TextArea, Button, Select } from "semantic-ui-react";
+import SimpleMenu from "./components/Menu";
 
 
 // import 'semantic-ui-css/semantic.min.css'
@@ -18,13 +19,19 @@ const AppContainer = styled.div`
   padding-bottom: 80px;
 `
 
+const MenuDiv = styled.div`
+  width: 100vw;
+`
+
 // app component
 function App() {
   return (
-    <AppContainer>
-      <PhotoGrid />
-    </AppContainer>
-    
+    <MenuDiv>
+      <SimpleMenu />
+      <AppContainer>
+        <PhotoGrid />
+      </AppContainer>
+    </MenuDiv>
   );
 }
 
