@@ -4,8 +4,6 @@ import PhotoGrid from "./components/PhotoGrid.js"
 import styled from 'styled-components'
 import { Grid, Form, Input, TextArea, Button, Select } from "semantic-ui-react";
 import SimpleMenu from "./components/Menu";
-
-
 // import 'semantic-ui-css/semantic.min.css'
 
 // using styled-components
